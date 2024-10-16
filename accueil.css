@@ -56,7 +56,7 @@ video:state(ms-media-controls) {
 }
 
 .home-content h1 {
-  font-size: clamp(30px, 5vw, 56px);
+  font-size: clamp(25px, 5vw, 50px);
   font-weight: 700;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
@@ -64,11 +64,11 @@ video:state(ms-media-controls) {
 }
 
 .home-content h3 {
-  font-size: clamp(20px, 2.5vw, 30px);
+  font-size: clamp(20px, 3vw, 30px);
 }
 
 .home-content h3:nth-of-type(2) {
-  margin-bottom: clamp(20px, 2.5vw, 30px);
+  margin-bottom: clamp(20px, 3vw, 30px);
   animation: slideTop 1s ease forwards;
   animation-delay: 0.7s;
 }
@@ -87,7 +87,7 @@ video:state(ms-media-controls) {
 }
 
 .home-content p {
-  font-size: clamp(10px, 2.5vw, 25px);
+  font-size: clamp(10px, 2vw, 20px);
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1s;
@@ -126,10 +126,31 @@ video:state(ms-media-controls) {
     opacity: 1;
   }
 }
-@media (max-width: 700px) {
+
+@media (max-width: 800px) {
   .home-content {
     width: 90%;
   }
-  .home {
+}
+
+@media (max-width: 700px) {
+  .home video {
+    display: none; 
+  }
+
+  .home .background-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 701px) {
+  .home .background-image {
+    display: none; /
   }
 }

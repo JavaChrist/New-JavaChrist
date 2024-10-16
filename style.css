@@ -212,6 +212,7 @@ footer p {
     border-radius: 10px;
     padding: 10px;
     width: auto;
+    z-index: 1;
   }
 
   .navbar a {
@@ -244,6 +245,12 @@ footer p {
   }
 }
 
+@media (max-width: 1180px) {
+  .home-content {
+    width: 30%;
+  }
+}
+
 @media (max-width: 1040px) {
   footer p {
     font-size: 12px;
@@ -260,12 +267,26 @@ footer p {
   .license-link {
     font-size: 10px;
   }
+
+  .navbar.active {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    padding: 0;
+    background: rgba(7, 85, 91, 0.179);
+    z-index: 2;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 680px) {
   footer {
     display: flex;
     flex-direction: column;
+    height: 100px;
   }
   .ai-badge {
     display: none;
