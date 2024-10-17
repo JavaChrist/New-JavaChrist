@@ -41,8 +41,31 @@ document.getElementById("message").addEventListener("keypress", function (event)
 
 // Fonction pour générer une réponse en fonction des mots-clés
 function getResponse(message) {
-    // Mots-clés et réponses correspondantes (avec plusieurs options pour chaque mot-clé)
- "services": [
+    // Mots-clés et réponses correspondantes (avec plusieurs options pour chaque  const responses = {mot-clé)
+
+    const responses = {
+"site": [
+"I offer services for the creation of websites tailored to your needs. Can you specify the type of site you want to create (showcase, e-commerce, etc.)?",
+"I can help you create a modern and responsive website. What is your project exactly ?",
+"I help with website design. Do you have a clear idea of what you want ?"
+],
+"price": [
+"Cost depends on features. For a custom quote, visit my contact page : <a href='/en/contact.html'>Page de contact</a>.",
+"Each project is unique. Contact me to discuss your project and get a quote : <a href='/en/contact.html'>Page de contact</a>."
+],
+
+"languages": [
+    "I work mainly with HTML, CSS, JavaScript, as well as frameworks like React and Node.js. Do you already use a particular language or technology ?",
+    "For web development, I use modern technologies such as JavaScript, HTML5, CSS3, and frameworks like React. Do you have a preference for a language or technology ?",
+    "Languages and frameworks like JavaScript, React, and Node.js are my specialty. What kind of technology are you looking for for your project ?"
+],
+"seo": [
+    "To improve the SEO of your site, I offer content optimization services, tags and structure. Would you like to know more about my SEO services ?",
+    "SEO is essential for online visibility. I can help you improve your site’s performance on search engines. You have specific questions about this ?",
+    "I offer full services to optimize the referencing of your site. Do you already have a site or would you like to create one ?"
+],
+ 
+"services": [
     "I offer a wide range of services, including website creation, SEO optimization, and web application development.",
     "My services include responsive website creation, UI/UX design, and much more. Check out my services page for more details.",
     "I offer customized services for website and web application creation. Check my services page for more information."
@@ -164,4 +187,19 @@ function getResponse(message) {
 ],
 "tendances web": [
     "Current trends include responsive design, SEO optimization, and the integration of artificial intelligence."
-]
+    ]
+    
+ };
+
+    // Boucler sur les mots-clés pour trouver une réponse
+    for (let keyword in responses) {
+        if (message.includes(keyword)) {
+            // Sélectionner une réponse aléatoire parmi les options disponibles
+            const options = responses[keyword];
+            return options[Math.floor(Math.random() * options.length)];
+        }
+    }
+
+    // Réponse par défaut si aucun mot-clé trouvé
+    return "Je suis désolé, je n'ai pas compris votre question. Pouvez-vous préciser votre besoin concernant un site internet ou une application web ?";
+}
