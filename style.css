@@ -201,7 +201,7 @@ footer p {
 }
 
 /* Responsive */
-@media (max-width: 1270px) {
+@media (max-width: 1350px) {
   .navbar {
     display: none;
     flex-direction: column;

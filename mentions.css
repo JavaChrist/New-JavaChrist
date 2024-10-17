@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ededed;
+  width: 100%;
+}
+
+.mention-content {
+  background: rgba(7, 85, 91, 0.634);
+  width: 90%;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 0px auto;
+  margin-top: 80px;
+}
+
+.sub-title {
+  text-align: left;
+  font-size: 50px;
+  padding-bottom: 10px;
+  color: #fff;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.sub-title span {
+  color: #0ef;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 2s;
+}

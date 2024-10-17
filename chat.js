@@ -23,7 +23,7 @@ function sendMessage() {
         const response = getResponse(message);
 
         // Ajouter la réponse du bot
-        chatbox.innerHTML += "<div><strong style='color: #37757a;'>Bot:</strong> " + response + "</div>";
+        chatbox.innerHTML += "<div><strong style='color: #37757a;'>Christ:</strong> " + response + "</div>";
         chatbox.scrollTop = chatbox.scrollHeight; // Scroll vers le bas
     }
 }
